@@ -71,6 +71,11 @@
     [self.layer insertSublayer:pulse below:self.layer];
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    pulse.frame = self.bounds;
+}
+
 -(void)setPulseStrokeColor:(CGColorRef) color{
     pulse.strokeColor = color;
 }
